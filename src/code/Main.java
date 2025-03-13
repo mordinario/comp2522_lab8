@@ -10,11 +10,13 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
+ * TODO FINISH THIS :D
+ * 
  * Javadoc >:D
  *
  * @author Marcy Ordinario
  * @author Andrew Hwang
- * @author Daryan
+ * @author Daryan Worya
  * @version 1.0
  */
 public class Main
