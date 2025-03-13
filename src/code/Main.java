@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
@@ -53,14 +54,44 @@ public class Main
             shortNames.forEach(System.out::println);
 
             // STARTING WITH "A"
+            System.out.println("\nCountry names that starting with the letter \"A\"");
+            final List<String> startsWithA = filteredStream(countries)
+                    .filter(s->s.startsWith("A"))
+                    .toList();
+
+            startsWithA.forEach(System.out::println);
 
             // ENDING WITH "LAND"
+            System.out.println("\nCountry names that end with the word \"LAND\"");
+            final List<String> endsWithLand = filteredStream(countries)
+                    .filter(s->s.endsWith("land"))
+                    .toList();
+
+            endsWithLand.forEach(System.out::println);
 
             // CONTAINING "UNITED"
+            System.out.println("\nCountry names that contain the word \"UNITED\"");
+            final List<String> containsUnited = filteredStream(countries)
+                    .filter(s->s.toLowerCase().contains("united"))
+                    .toList();
+
+            containsUnited.forEach(System.out::println);
 
             // SORTED ALPHABETICALLY (ASC)
+            System.out.println("\nCountry names in ascending order (alphabetically)");
+            final List<String> ascendingOrder = filteredStream(countries)
+                    .sorted()
+                    .toList();
+
+            ascendingOrder.forEach(System.out::println);
 
             // SORTED ALPHABETICALLY (DESC)
+            System.out.println("\nCountry names in descending order (alphabetically)");
+            final List<String> descendingOrder = filteredStream(countries)
+                    .sorted(Comparator.reverseOrder())
+                    .toList();
+
+            descendingOrder.forEach(System.out::println);
 
             // UNIQUE FIRST LETTERS
 
