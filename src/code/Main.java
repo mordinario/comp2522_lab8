@@ -3,7 +3,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -26,9 +25,6 @@ public class Main
         final Path         dataTxtPath;
         final List<String> countries;
         final List<String> outputLines;
-
-        boolean matchesPathCreated;
-        boolean dataTxtPathCreated;
 
         countryPath = Paths.get("src", "res", "week8countries.txt");
         matchesPath = Paths.get("src", "res", "matches");
@@ -54,6 +50,7 @@ public class Main
             final List<String> longNames = filteredStream(countries)
                     .filter(s->s.length()>10)
                     .toList();
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names longer than 10 characters:");
             outputLines.addAll(longNames);
             outputLines.add("");
@@ -65,6 +62,7 @@ public class Main
             final List<String> shortNames = filteredStream(countries)
                     .filter(s->s.length()<5)
                     .toList();
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names shorter than 5 characters:");
             outputLines.addAll(shortNames);
             outputLines.add("");
@@ -76,6 +74,7 @@ public class Main
             final List<String> startsWithA = filteredStream(countries)
                     .filter(s->s.startsWith("A"))
                     .toList();
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names starting with 'A':");
             outputLines.addAll(startsWithA);
             outputLines.add("");
@@ -87,6 +86,7 @@ public class Main
             final List<String> endsWithLand = filteredStream(countries)
                     .filter(s->s.endsWith("land"))
                     .toList();
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names that end with the word \"LAND\":");
             outputLines.addAll(endsWithLand);
             outputLines.add("");
@@ -98,6 +98,7 @@ public class Main
             final List<String> containsUnited = filteredStream(countries)
                     .filter(s->s.toLowerCase().contains("united"))
                     .toList();
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names that contain the word \"UNITED\":");
             outputLines.addAll(containsUnited);
             outputLines.add("");
@@ -109,6 +110,7 @@ public class Main
             final List<String> ascendingOrder = filteredStream(countries)
                     .sorted()
                     .toList();
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names in ascending order (alphabetically):");
             outputLines.addAll(ascendingOrder);
             outputLines.add("");
@@ -120,6 +122,7 @@ public class Main
             final List<String> descendingOrder = filteredStream(countries)
                     .sorted(Comparator.reverseOrder())
                     .toList();
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names in descending order (alphabetically):");
             outputLines.addAll(descendingOrder);
             outputLines.add("");
@@ -136,6 +139,7 @@ public class Main
 
             uniqueFirstLetters.forEach(System.out::println);
 
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Extracting unique first letters of countries and storing it in a list:");
             uniqueFirstLetters.forEach(letter -> outputLines.add(letter.toString()));  // Convert Character to String
             outputLines.add("");
@@ -145,7 +149,7 @@ public class Main
                     .count();
 
             System.out.println("\nTotal number of countries in the list: " + totalCountries);
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Total number of countries in the list: " + totalCountries);
             outputLines.add("");
 
@@ -154,7 +158,7 @@ public class Main
                     .max(Comparator.comparingInt(String::length));
 
             System.out.println("\nLongest country name: " + longestCountry.orElse("N/A"));
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Longest country name: " + longestCountry.orElse("N/A"));
             outputLines.add("");
 
@@ -163,7 +167,7 @@ public class Main
                     .min(Comparator.comparingInt(String::length));
 
             System.out.println("\nShortest country name: " + shortestCountry.orElse("N/A"));
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Shortest country name: " + shortestCountry.orElse("N/A"));
             outputLines.add("");
 
@@ -174,7 +178,7 @@ public class Main
                     .toList();
 
             uppercaseCountries.forEach(System.out::println);
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names in all uppercase:");
             outputLines.addAll(uppercaseCountries);
             outputLines.add("");
@@ -186,7 +190,7 @@ public class Main
                     .toList();
 
             lowercaseCountries.forEach(System.out::println);
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names in all lowercase:");
             outputLines.addAll(lowercaseCountries);
             outputLines.add("");
@@ -198,7 +202,7 @@ public class Main
                     .toList();
 
             moreThanOneWord.forEach(System.out::println);
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names that contain more than one word:");
             outputLines.addAll(moreThanOneWord);
             outputLines.add("");
@@ -210,7 +214,7 @@ public class Main
                 charCount = s.length();
                 System.out.println(s + ": " + charCount + " characters");
             });
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Country names and their character count:");
             countries.forEach(s -> outputLines.add(s + ": " + s.length() + " characters"));
             outputLines.add("");
@@ -219,7 +223,7 @@ public class Main
             final boolean anyCountryStartWithZ = countries.stream()
                     .anyMatch(s->s.startsWith("Z"));
             System.out.println("Does any country name start with Z? " + anyCountryStartWithZ);
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Does any country name start with Z? " + anyCountryStartWithZ);
             outputLines.add("");
 
@@ -227,7 +231,7 @@ public class Main
             final boolean countryNamesLongerThan3 = countries.stream()
                     .allMatch(s->s.length() > 3);
             System.out.println("Are all country names longer than 3 characters? " + countryNamesLongerThan3);
-
+            outputLines.add("\n-----------------------------------------");
             outputLines.add("Are all country names longer than 3 characters? " + countryNamesLongerThan3);
             outputLines.add("");
 

@@ -1,3 +1,5 @@
+
+-----------------------------------------
 Country names longer than 10 characters:
 Afghanistan
 Antigua and Barbuda
@@ -42,6 +44,8 @@ United Kingdom
 United States
 Vatican City
 
+
+-----------------------------------------
 Country names shorter than 5 characters:
 Chad
 Cuba
@@ -54,6 +58,8 @@ Oman
 Peru
 Togo
 
+
+-----------------------------------------
 Country names starting with 'A':
 Afghanistan
 Albania
@@ -67,6 +73,8 @@ Australia
 Austria
 Azerbaijan
 
+
+-----------------------------------------
 Country names that end with the word "LAND":
 England
 Finland
@@ -79,11 +87,15 @@ Scotland
 Switzerland
 Thailand
 
+
+-----------------------------------------
 Country names that contain the word "UNITED":
 United Arab Emirates
 United Kingdom
 United States
 
+
+-----------------------------------------
 Country names in ascending order (alphabetically):
 Afghanistan
 Albania
@@ -286,6 +298,8 @@ Yemen
 Zambia
 Zimbabwe
 
+
+-----------------------------------------
 Country names in descending order (alphabetically):
 Zimbabwe
 Zambia
@@ -488,6 +502,10 @@ Algeria
 Albania
 Afghanistan
 
+
+-----------------------------------------
+
+-----------------------------------------
 Extracting unique first letters of countries and storing it in a list:
 A
 B
@@ -515,12 +533,20 @@ W
 Y
 Z
 
+
+-----------------------------------------
 Total number of countries in the list: 200
 
+
+-----------------------------------------
 Longest country name: Congo, Democratic Republic of the
 
+
+-----------------------------------------
 Shortest country name: Chad
 
+
+-----------------------------------------
 Country names in all uppercase:
 AFGHANISTAN
 ALBANIA
@@ -723,6 +749,8 @@ YEMEN
 ZAMBIA
 ZIMBABWE
 
+
+-----------------------------------------
 Country names in all lowercase:
 afghanistan
 albania
@@ -925,6 +953,8 @@ yemen
 zambia
 zimbabwe
 
+
+-----------------------------------------
 Country names that contain more than one word:
 Antigua and Barbuda
 Bosnia and Herzegovina
@@ -967,6 +997,8 @@ United Kingdom
 United States
 Vatican City
 
+
+-----------------------------------------
 Country names and their character count:
 Afghanistan: 11 characters
 Albania: 7 characters
@@ -1169,7 +1201,11 @@ Yemen: 5 characters
 Zambia: 6 characters
 Zimbabwe: 8 characters
 
+
+-----------------------------------------
 Does any country name start with Z? true
 
+
+-----------------------------------------
 Are all country names longer than 3 characters? true
 
