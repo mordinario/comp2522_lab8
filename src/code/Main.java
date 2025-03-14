@@ -7,9 +7,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * TODO FINISH THIS :D
- *
- * Javadoc >:D
+ * The Main class contains the main method which generates a list of countries.
+ * The program performs various operations that filter and sort the countries,
+ * such as length, ascending order, etc. and writes the output to a text file.
  *
  * @author Marcy Ordinario
  * @author Andrew Hwang
