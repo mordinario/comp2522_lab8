@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 /**
  * TODO FINISH THIS :D
- * 
+ *
  * Javadoc >:D
  *
  * @author Marcy Ordinario
